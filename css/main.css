@@ -95,6 +95,11 @@ body {
     background-color: #555;
     color: white;
 }
+
+.comic-tab a {
+    background-color: green;
+    color: white;
+}
 /* Hover */
 
 .nav-item a:hover {
