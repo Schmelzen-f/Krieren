@@ -38,7 +38,7 @@ body {
     padding: 30px 20px;
 
     border-right: 1px solid #ddd;
-    background-color: #fafafa;
+    background-color: #000;
 }
 
 
@@ -133,6 +133,8 @@ body {
     box-sizing: border-box;
 
     padding: 50px;
+   
+    background-color: red;
 }
 
 
