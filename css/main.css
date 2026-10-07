@@ -91,7 +91,10 @@ body {
                 color 0.2s ease;
 }
 
-
+.game-tab a {
+    background-color: #555;
+    color: white;
+}
 /* Hover */
 
 .nav-item a:hover {
