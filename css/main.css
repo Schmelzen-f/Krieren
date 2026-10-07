@@ -190,3 +190,12 @@ body {
         padding: 30px 20px;
     }
 }
+
+.nav-item a img {
+    width: 100%;
+    max-width: 140px;
+    height: auto;
+
+    display: block;
+    margin: 0 auto;
+}
