@@ -76,19 +76,14 @@ body {
 .nav-item a {
     display: block;
 
-    padding: 10px;
+    padding: 0;
 
-    text-align: center;
     text-decoration: none;
 
-    color: white;
-    background-color: #4CAF50;
+    background-color: transparent;
+    border: none;
 
-    border: 1px solid #4CAF50;
-    border-radius: 4px;
-
-    transition: background-color 0.2s ease,
-                color 0.2s ease;
+    transition: none;
 }
 
 .game-tab a {
@@ -102,12 +97,7 @@ body {
 }
 /* Hover */
 
-.nav-item a:hover {
-    color: #fff;
-    background-color: #333;
 
-    text-decoration: none;
-}
 
 
 /* Description under tab */
@@ -193,9 +183,6 @@ body {
 
 .nav-item a img {
     width: 100%;
-    max-width: 140px;
     height: auto;
-
     display: block;
-    margin: 0 auto;
 }
