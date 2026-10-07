@@ -22,3 +22,38 @@ footer {
     border-radius: 4px;
     padding: 15px;
 }
+.site-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 220px;
+    padding: 30px 20px;
+    border-right: 1px solid #ddd;
+}
+
+.site-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.side-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.side-nav a {
+    display: block;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid #ccc;
+}
+
+.main-content {
+    flex: 1;
+    padding: 40px;
+}
