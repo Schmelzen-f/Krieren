@@ -1,59 +1,171 @@
-.navbar {
-    margin-bottom: 0;
+/* =========================
+   Base
+   ========================= */
+
+html {
+    scroll-behavior: smooth;
 }
 
-.jumbotron {
-    height: 65vh;
-    background-image: url('../assets/background.jpeg')
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff;
+    color: #222;
 }
 
-.jumbotron h1,
-.jumbotron h2 {
-    color: #fff;
-}
 
-.content-section-b {
-    background-color: #eee;
-}
+/* =========================
+   Main layout
+   ========================= */
 
-footer {
-    background-color: #f8f8f8;
-    border: 1px solid #e7e7e7;
-    border-radius: 4px;
-    padding: 15px;
-}
 .site-layout {
     display: flex;
     min-height: 100vh;
 }
 
+
+/* =========================
+   Left sidebar
+   ========================= */
+
 .sidebar {
     width: 220px;
+    min-width: 220px;
+    min-height: 100vh;
+    box-sizing: border-box;
+
     padding: 30px 20px;
+
     border-right: 1px solid #ddd;
+    background-color: #fafafa;
 }
 
+
+/* Website name */
+
 .site-title {
+    margin-bottom: 30px;
+
     font-size: 24px;
     font-weight: bold;
-    margin-bottom: 30px;
+    text-align: center;
 }
+
+
+/* =========================
+   Navigation
+   ========================= */
 
 .side-nav {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+
+    /* 2 columns */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    /* 2 rows */
+    grid-auto-rows: auto;
+
     gap: 10px;
 }
 
+
+/* Each tab */
+
 .side-nav a {
     display: block;
-    padding: 12px;
+
+    padding: 10px 5px;
+
     text-align: center;
     text-decoration: none;
+
+    color: #333;
+    background-color: #fff;
+
     border: 1px solid #ccc;
+    border-radius: 4px;
+
+    transition: background-color 0.2s ease,
+                color 0.2s ease;
 }
+
+
+/* Hover */
+
+.side-nav a:hover {
+    color: #fff;
+    background-color: #333;
+
+    text-decoration: none;
+}
+
+
+/* =========================
+   Main content
+   ========================= */
 
 .main-content {
     flex: 1;
-    padding: 40px;
+
+    box-sizing: border-box;
+
+    padding: 50px;
+}
+
+
+/* Each section */
+
+.main-content section {
+    margin-bottom: 100px;
+}
+
+
+/* Headings */
+
+.main-content h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    font-size: 40px;
+}
+
+.main-content h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    font-size: 32px;
+}
+
+.main-content p {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   Responsive
+   ========================= */
+
+@media (max-width: 768px) {
+
+    .site-layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-width: 0;
+        min-height: auto;
+
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .side-nav {
+        width: 100%;
+    }
+
+    .main-content {
+        padding: 30px 20px;
+    }
 }
