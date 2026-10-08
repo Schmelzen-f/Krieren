@@ -37,8 +37,8 @@ body {
 
     padding: 30px 20px;
 
-    border-right: none;
     background-color: #000;
+    color: white;
 }
 
 
@@ -54,7 +54,7 @@ body {
 
 
 /* =========================
-   Navigation items
+   Navigation
    ========================= */
 
 .side-nav {
@@ -64,54 +64,143 @@ body {
 }
 
 
-/* One tab + description */
-
 .nav-item {
     width: 100%;
 }
 
 
-/* Tab */
+/* Normal text tabs */
 
 .nav-item a {
     display: block;
 
     padding: 0;
 
+    font-size: 28px;
+    font-weight: bold;
+
+    text-align: center;
     text-decoration: none;
+
+    color: white;
 
     background-color: transparent;
     border: none;
 
     transition: none;
-   font-size: 28px;
-font-weight: bold;
 }
 
-.game-tab a {
-    background-color: #555;
+
+/* Images inside tabs */
+
+.nav-item a img {
+    width: 100%;
+    height: auto;
+
+    display: block;
+}
+
+
+/* No hover effect */
+
+.nav-item a:hover {
     color: white;
+    background-color: transparent;
+    text-decoration: none;
 }
 
-.comic-tab a {
-    background-color: green;
+
+/* =========================
+   Game submenu
+   ========================= */
+
+.game-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+
+/* Back button */
+
+.back-button {
+    font-size: 24px;
+
     color: white;
+
+    cursor: pointer;
+    text-decoration: none;
 }
-/* Hover */
+
+.back-button:hover {
+    color: white;
+    text-decoration: none;
+}
 
 
+/* Game categories */
+
+.game-group {
+    width: 100%;
+}
 
 
-/* Description under tab */
+/* Group title */
 
-.nav-item p {
-    margin: 8px 4px 0;
+.game-group-title {
+    width: 100%;
 
-    font-size: 13px;
-    line-height: 1.5;
+    padding: 0;
 
-    color: #777;
-    text-align: center;
+    font-family: 'Comic Neue', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+
+    text-align: left;
+
+    color: white;
+
+    background: none;
+    border: none;
+
+    cursor: pointer;
+}
+
+
+/* Arrow */
+
+.game-group-title .arrow {
+    display: inline-block;
+    width: 20px;
+}
+
+
+/* List of games */
+
+.game-list {
+    margin: 8px 0 0 20px;
+    padding: 0;
+
+    list-style: none;
+}
+
+
+.game-list li {
+    margin-bottom: 6px;
+}
+
+
+.game-list a {
+    font-size: 19px;
+
+    color: white;
+    text-decoration: none;
+}
+
+
+.game-list a:hover {
+    color: white;
+    text-decoration: none;
 }
 
 
@@ -125,19 +214,16 @@ font-weight: bold;
     box-sizing: border-box;
 
     padding: 50px;
-   
+
     background-color: red;
+    color: white;
 }
 
-
-/* Main section */
 
 .main-content section {
     margin-bottom: 100px;
 }
 
-
-/* Main title */
 
 .main-content h1 {
     margin-top: 0;
@@ -147,11 +233,16 @@ font-weight: bold;
 }
 
 
-/* Main text */
-
 .main-content p {
     font-size: 18px;
     line-height: 1.7;
+}
+
+
+/* Hide sections when needed */
+
+.hidden-section {
+    display: none;
 }
 
 
@@ -171,7 +262,7 @@ font-weight: bold;
         min-height: auto;
 
         border-right: none;
-        border-bottom: 1px solid #ddd;
+        border-bottom: none;
     }
 
     .side-nav {
@@ -181,10 +272,4 @@ font-weight: bold;
     .main-content {
         padding: 30px 20px;
     }
-}
-
-.nav-item a img {
-    width: 100%;
-    height: auto;
-    display: block;
 }
