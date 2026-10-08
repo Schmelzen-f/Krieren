@@ -84,6 +84,8 @@ body {
     border: none;
 
     transition: none;
+   font-size: 28px;
+font-weight: bold;
 }
 
 .game-tab a {
